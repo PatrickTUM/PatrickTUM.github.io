@@ -1,1 +1,265 @@
-Work in progress.
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="A Dataset and Remote Sensing Benchmark for Multimodal Cloud Removal" />
+    <meta name="author" content="Patrick Ebel" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>SEN12MS-CR Dataset</title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- Font-Awesome Icons Styles -->
+    <link href="../assets/css/font-awesome.css" rel="stylesheet" />
+     <!-- Pretty Photo For PopUp Styles -->
+    <link href="../assets/css/prettyPhoto.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="../assets/css/custom.css" rel="stylesheet" />    
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+<style>
+#myVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#myVideo2 {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+#rcorners2 {
+    border-radius: 25px;
+    border: 2px solid #D5D8DC ;
+    padding: 20px; 
+    width: 900px;
+    height: 200px;    
+}
+</style>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;margin:auto}
+.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-zda1{border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;text-align:center;vertical-align:top}
+.tg .tg-zda2{border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;text-align:left;vertical-align:top}
+.tg .tg-804w{font-family:Arial, Helvetica, sans-serif !important;;text-align:center;vertical-align:top}
+</style>
+
+</head>
+<body>
+	<!-- insert MathJax to render LaTeX code via js -->
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		 <section id="home-sec">
+ 		 <div class="imgandtextbanner">
+		 	<img src="../assets/img/banners/ROIs2017_103/banner.gif" alt="cloudy_banner" style="width:80%; height:800px;">
+		  	<div class="centeredtextblock">
+				<h1>SEN12MS-CR DATASET</h1> 
+				<h4>A Dataset and Remote Sensing Benchmark <br> 
+					for Multimodal Cloud Removal</h4>
+		  	</div>
+		</div> 
+		   
+		 </section>
+
+    <!-- HOME/VEDIO SECTION END-->
+	<br />
+<br />
+<br />
+<br />
+       <section id="Introduction-sec"  >
+
+           
+            <div class="container basic-set" >
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <h3 class="head-line"><span ></span>   Introduction <span > </span> </h3>
+                        
+                    </div>
+                </div>
+              <p style="width:1000px; margin:auto; text-align:justify;">
+              		On average, over half of all optical observations acquired via spaceborne Earth imagery are affected by clouds. As cloud coverage severely impedes the ongoing observation of Earth, the automated reconstruction of noisy or cloud covered information is a persistent problem in signal processing and remote sensing. While classical remote sensing applications oftentimes focused on narrowly-defined areals and case studies, the increasing availability of public-access, daily and large-scale satellite monitoring shifted the community's interest towards globally applicable methodology. To support the development of modern machine learning techniques for the purpose of cloud removal on whole-planet satellite data, we curated a large data set for training and evaluating new approaches.
+				</p>  <br />
+				<p style="width:1000px; margin:auto; text-align:justify;">
+This data set, SEN12MS-CR, is a multi-modal and mono-temporal data set for cloud removal. It contains paired and co-registered space-borne radar measurements practically unaffected by clouds, as well as cloud-covered and cloud-free multi-spectral optical satellite observations. The radar and optical data are collected via Sentinel-1 and Sentinel-2 satellites from European Space Agency's Copernicus mission, respectively. The Sentinel satellites provide public access data and are among the most prominent satellites in Earth observation. 
+				</p>  <br />
+				<p style="width:1000px; margin:auto; text-align:justify;">
+SEN12MS-CR is the first public data set for cloud removal in Earth observation to provide a large-scale global and all-season coverage. Based on the observation that cloud coverage varies widely in practice, all scenarios ranging from clear skies to absolute coverage are contained in the train and test data. By making this curated and readily pre-processed data set available to the research community, we hope to hope to help advance automated cloud removal in optical satellite data.
+                  </p>
+                  <br />
+			
+           <figure class="item">
+            	<img src="../assets/img/samples/mono/sample_mono.png" class="img-responsive " alt="" width="800px" style="margin:auto;"/>
+                <figcaption class="caption"><small>Exemplary triplets of data. Every sample in SEN12MS-CR is a tuple consisting of 2-bands Sentinel-1 radar measurements, as well as cloudy and cloud-free 13-bands Sentinel-2 optical observations.</small></figcaption>
+		   </figure>
+		   
+           </div>
+           </section>
+		   	<br />
+			<br />
+			<br />
+			<br />
+
+		   <section id="Statistics-sec"  >
+           
+            <div class="container basic-set" >
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <h3 class="head-line"><span ></span>   Statistics <span > </span> </h3>
+                        
+                    </div>
+                </div>
+					  <p style="width:1000px; margin:auto; text-align:justify;">
+                      SEN12MS-CR is a global data set for multi-modal cloud removal. It contains observations covering 175 globally distributed Regions of Interest recorded in one of four seasons throughout the year of 2018. For each region, synthetic aperture radar (SAR) Sentinel-1 as well as cloudy and cloud-free optical multi-spectral Sentinel-2 are provided. The full-scene images are sliced up into a total of 122,218 patch triplets, each patch of size \(256 \times 256 \: px^2\). The samples are patch-wise co-registered and fully compatible with the <a href="https://github.com/schmitt-muc/SEN12MS"; target="_blank">SEN12MS data set</a>, such that semantic segmentation and scene classification can be performed based on the available semantic land cover annotations. The approximate cloud coverage of all data is about at circa 48%---reaching from clear-view images (e.g. for validation purposes), over semi-transparent haze or small clouds to dense and wide cloud coverage.
+                  </p>
+            <figure class="item">
+            	<img src="../assets/img/maps/SEN12MS_atlas.png" class="img-responsive " alt="" width="900px" style="margin:auto;"/>
+                <figcaption class="caption"><small>Geospatial distribution of ROI in SEN12MS-CR. Different colors indicate differences in seasons collected.</small></figcaption>
+			</figure>
+           </div>
+           </section>
+		   <br />
+
+           <figure class="item">
+            	<img src="../assets/img/monotemp_full_scene.png" class="img-responsive " alt="" width="1000px" style="margin:auto;"/>
+                <figcaption class="caption"><small>Exemplary cloud removal results. Left to right: Radar data, loud-covered optical data, cloud-removed optical predictions and cloud-free reference optical data.</small></figcaption>
+		   </figure>
+<br />
+<br />
+<br />
+<br />
+		   <section id="Download-sec"  >
+
+           
+            <div class="container basic-set" >
+                <div class="row text-center">
+                    <div class="col-md-12">
+
+                        <h3 class="head-line"><span ></span>   Download <span > </span> </h3>
+                        
+                    </div>
+                </div>
+		    <div class="txt-block">
+
+									<p style="width:1000px;">
+											1. Dataset
+										
+									</p>
+			    <p style="text-align:center;">
+                            Download Link <a href="https://mediatum.ub.tum.de/1554803"; target="_blank">here</a>
+                </p>
+                  
+        </div>
+        		    <div class="txt-block">
+
+									<p style="width:1000px;">
+											2. Code
+										
+									</p>
+			    <p style="text-align:center;">
+                            Download Links <a href="https://mediatum.ub.tum.de/1554803"; target="_blank">here</a> and <a href="https://github.com/ameraner/dsen2-cr"; target="_blank">here</a>
+                </p>
+                  
+        </div>
+        
+				<div class="txt-block">
+
+									<p style="width:1000px;">
+											3. Trained Models
+									</p>
+                  
+        </div>
+
+
+        
+<p style="text-align:center;">
+                            Cloud Removal Models
+                  </p>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-804w">Model</th>
+    <th class="tg-804w">Weights Download</th>
+    <th class="tg-804w">Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-zda1">DSen2-CR</td>
+    <td class="tg-zda1"><a href="https://drive.google.com/file/d/1L3YUVOnlg67H5VwlgYO9uC9iuNlq7VMg/view?usp=sharing"; title="large ResNet"; target="_blank">GoogleDrive</a> </br><a href="https://syncandshare.lrz.de/getlink/fiJ3GvYfeiprTEYuyp1CCGFe/model_SARcarl.hdf5"; title="large ResNet"; target="_blank">LRZ Share</a></td>
+    <td class="tg-zda2">[Tensorflow] The network trained on SEN12MS-CR in <i>Meraner et al 2020</i> on paired radar and cloudy optical satellite observations.</td>
+  </tr>
+    <tr>
+    <td class="tg-zda1">ResNet</td>
+    <td class="tg-zda1"><a href="https://syncandshare.lrz.de/getlink/fiFfN2bj6DaFXfGEGAaAvdZE/baseline_resnet.pth"; title="small ResNet"; target="_blank">LRZ Share</a><br></td>
+    <td class="tg-zda2">[PyTorch] A ResNet16 pre-trained for mono-temporal cloud removal on <a href=#"; target="_blank">SEN12MS-CR</a>. Takes radar and multi-spectral satellite data as inputs to make cloud-removed multispectral optical predictions.</td>
+  </tr>
+  <tr>
+  </tr>
+</tbody>
+</table>
+<br>
+</div>
+</section>
+
+<br />
+<br />
+<br />
+<br />
+
+<section id="References-sec"  >
+           
+    <div class="container basic-set" >
+        <div class="row text-center">
+            <div class="col-md-12">
+                <h3 class="head-line"><span ></span>   References <span > </span> </h3>    
+            </div>
+        </div>
+              
+  		<div class="txt-block">
+			<p style="width:1000px;">
+					1. Citation <br> <br>
+					&nbsp &nbsp If you utilize this dataset in your work, please use the following citation:
+			</p>
+			<p id = "rcorners2">
+			<small>
+				@article{sen12mscr,<br>
+						 &nbsp &nbsp &nbsp &nbsp title = {{Multisensor Data Fusion for Cloud Removal in Global and All-Season Sentinel-2 Imagery}},<br>
+						 &nbsp &nbsp &nbsp &nbsp author = {Ebel, Patrick and Meraner, Andrea and Schmitt, Michael and Zhu, Xiao Xiang},<br>
+						 &nbsp &nbsp &nbsp &nbsp journal = {IEEE Transactions on Geoscience and Remote Sensing},<br>
+						 &nbsp &nbsp &nbsp &nbsp year = {2020}<br>
+						 &nbsp &nbsp &nbsp &nbsp publisher = {IEEE}<br>
+				}
+			</small>
+			</p>
+        </div>
+   </div>
+</section>
+
+       <figure class="item">
+       <img src="../assets/img/logos/DLR_Logo.svg" style="float: right; width: 10%; margin-right: 1%; margin-bottom: 0.5em;">
+       <img src="../assets/img/logos/Logo_of_the_Technical_University_of_Munich.svg" style="float: right; width: 10%; margin-right: 1%; margin-bottom: 0.5em;">
+	   </figure>
+		   
+       <!-- CONTACT  SECTION END-->
+
+    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- BOOTSTRAP SCRIPTS  -->
+    <script src="../assets/js/bootstrap.js"></script>
+     <!-- EASING SCROLL SCRIPTS PLUGIN  -->
+    <script src="../assets/js/custom.js"></script>
+    
+</body>
+</html>
