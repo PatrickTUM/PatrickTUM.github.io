@@ -162,16 +162,19 @@
 										
 									</p>
 			    <p style="text-align:center;">
-                            Download Link <a href="https://mediatum.ub.tum.de/1639953"; target="_blank">here</a><br/><br/>
+                            Download Link <a href="https://mediatum.ub.tum.de/1639953"; target="_blank">here</a> (train split) and <a href="https://mediatum.ub.tum.de/1659251"; target="_blank">here</a> (test split) <br/><br/>
                  
-                Note: You can also download (parts of) the data in the terminal (passwd: m1639953) using wget or rsync, for instance via <br/>
+                Note: You can also download (parts of) the data in the terminal (passwd: <i>m1639953</i> or <i>m1659251</i>) using wget or rsync, for instance via <br/>
                 
                	<code>
            			wget "ftp://m1639953:m1639953@dataserv.ub.tum.de/s1_africa.tar.gz" 
-				</code><br/>
+				</code>, <br/>
                	<code>
 				rsync -chavzP --stats rsync://m1639953@dataserv.ub.tum.de/m1639953/ .
-				</code>
+				</code> or, likewise, for the test split<br/>
+				<code>
+				rsync -chavzP --stats rsync://m1659251@dataserv.ub.tum.de/m1659251/ .
+				</code><br/>
 				 </p>
 
         </div>
