@@ -136,6 +136,93 @@ SEN12MS-CR is the first public data set for cloud removal in Earth observation t
             	<img src="../assets/img/monotemp_full_scene.png" class="img-responsive " alt="" width="1000px" style="margin:auto;"/>
                 <figcaption class="caption"><small>Exemplary cloud removal results. Left to right: Radar data, loud-covered optical data, cloud-removed optical predictions and cloud-free reference optical data.</small></figcaption>
 		   </figure>
+		   
+<br />
+<br />
+<br />
+
+<p style="text-align:center;"><span style="text-decoration:underline">Benchmarking</span></p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:8px 20px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:8px 20px;word-break:normal;}
+.tg .tg-z4i2{border-color:#000000;text-align:left;vertical-align:middle}
+.tg .tg-km2t{border-color:#000000;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-zv4m{border-color:#000000;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-z4i2">Method</th>
+    <th class="tg-z4i2">MAE &#8595</th>
+    <th class="tg-z4i2">SAM &#8595</th>
+    <th class="tg-z4i2">PSNR &#8593</th>
+    <th class="tg-z4i2">SSIM &#8593</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-zv4m">McGAN <a href="https://openaccess.thecvf.com/content_cvpr_2017_workshops/w18/html/Enomoto_Filmy_Cloud_Removal_CVPR_2017_paper.html"; target="_blank">(Enomoto et al., 2017)</a></td>
+    <td class="tg-zv4m">0.0475</td>
+    <td class="tg-zv4m">7.8380</td>
+    <td class="tg-zv4m">25.1439</td>
+    <td class="tg-zv4m">0.7436</td>
+  </tr>
+  <tr>
+    <td class="tg-zv4m">SAR-Opt-cGAN <a href="https://ieeexplore.ieee.org/document/8519215"; target="_blank">(Grohnfeldt et al., 2018)</a></td>
+    <td class="tg-zv4m">0.0429</td>
+    <td class="tg-zv4m">7.7469</td>
+    <td class="tg-zv4m">25.5932</td>
+    <td class="tg-zv4m">0.7642</td>
+  </tr>
+  <tr>
+    <td class="tg-zv4m"><span style="font-weight:400;font-style:normal">SAR2OPT <a href="https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/IV-1/5/2018/"; target="_blank">(Bermudez et al., 2018)</a></span></td>
+    <td class="tg-zv4m">0.0415</td>
+    <td class="tg-zv4m">7.3941</td>
+    <td class="tg-zv4m">25.8694</td>
+    <td class="tg-zv4m">0.7930</td>
+  </tr>
+  <tr>
+    <td class="tg-zv4m">SpA GAN <a href="https://arxiv.org/abs/2009.13015"; target="_blank">(Pan, 2020)</a></td>
+    <td class="tg-zv4m">0.0448</td>
+    <td class="tg-zv4m">9.0423</td>
+    <td class="tg-zv4m">24.7838</td>
+    <td class="tg-zv4m">0.7544</td>
+  </tr>
+  <tr>
+    <td class="tg-zv4m">Simulation-Fusion GAN <a href="https://www.mdpi.com/2072-4292/12/1/191"; target="_blank">(Gao et al., 2020)</a></td>
+    <td class="tg-zv4m">0.0445</td>
+    <td class="tg-zv4m">8.3167</td>
+    <td class="tg-zv4m">24.7283</td>
+    <td class="tg-zv4m">0.7013</td>
+  </tr>
+  <tr>
+    <td class="tg-zv4m">DSen2-CR <a href="https://www.sciencedirect.com/science/article/pii/S0924271620301398"; target="_blank">(Meraner et al., 2020)</a></td>
+    <td class="tg-zv4m">0.0307</td>
+    <td class="tg-zv4m">4.7359</td>
+    <td class="tg-zv4m">27.7629</td>
+    <td class="tg-zv4m">0.8740</td>
+  </tr>
+  <tr>
+    <td class="tg-km2t">GLF-CR <a href="https://arxiv.org/abs/2206.02850"; target="_blank">(Xu et al., 2022)</a></td>
+    <td class="tg-km2t">0.0277</td>
+    <td class="tg-km2t">4.4907</td>
+    <td class="tg-km2t">28.6393</td>
+    <td class="tg-km2t">0.8845</td>
+  </tr>
+</tbody>
+</table>
+
+<br /> 
+<p style="text-align:center;">
+Feel free to report this benchmarking of prior methods in your work utilizing SEN12MS-CR. 
+<br /> 
+Please reach out to us if you would like to have your work referenced and your model included in the benchmark.
+</p>
+
 <br />
 <br />
 <br />
@@ -205,14 +292,14 @@ SEN12MS-CR is the first public data set for cloud removal in Earth observation t
 </thead>
 <tbody>
   <tr>
-    <td class="tg-zda1">DSen2-CR</td>
-    <td class="tg-zda1"><a href="https://drive.google.com/file/d/1L3YUVOnlg67H5VwlgYO9uC9iuNlq7VMg/view?usp=sharing"; title="large ResNet"; target="_blank">GoogleDrive</a> </br><a href="https://syncandshare.lrz.de/getlink/fiJ3GvYfeiprTEYuyp1CCGFe/model_SARcarl.hdf5"; title="large ResNet"; target="_blank">LRZ Share</a></td>
-    <td class="tg-zda2">[Tensorflow] The network trained on SEN12MS-CR in <i>Meraner et al 2020</i> on paired radar and cloudy optical satellite observations.</td>
+    <td class="tg-804w">DSen2-CR</td>
+    <td class="tg-804w"><a href="https://drive.google.com/file/d/1L3YUVOnlg67H5VwlgYO9uC9iuNlq7VMg/view?usp=sharing"; title="large ResNet"; target="_blank">GoogleDrive</a> </br><a href="https://syncandshare.lrz.de/getlink/fiJ3GvYfeiprTEYuyp1CCGFe/model_SARcarl.hdf5"; title="large ResNet"; target="_blank">LRZ Share</a></td>
+    <td class="tg-804w">[Tensorflow] The network trained on SEN12MS-CR in <i>Meraner et al 2020</i> on paired radar and cloudy optical satellite observations.</td>
   </tr>
     <tr>
-    <td class="tg-zda1">ResNet</td>
-    <td class="tg-zda1"><a href="https://syncandshare.lrz.de/getlink/fiFfN2bj6DaFXfGEGAaAvdZE/baseline_resnet.pth"; title="small ResNet"; target="_blank">LRZ Share</a><br></td>
-    <td class="tg-zda2">[PyTorch] A ResNet16 pre-trained for mono-temporal cloud removal on <a href=#"; target="_blank">SEN12MS-CR</a>. Takes radar and multi-spectral satellite data as inputs to make cloud-removed multispectral optical predictions.</td>
+    <td class="tg-804w">ResNet</td>
+    <td class="tg-804w"><a href="https://syncandshare.lrz.de/getlink/fiFfN2bj6DaFXfGEGAaAvdZE/baseline_resnet.pth"; title="small ResNet"; target="_blank">LRZ Share</a><br></td>
+    <td class="tg-804w">[PyTorch] A ResNet16 pre-trained for mono-temporal cloud removal on <a href=#"; target="_blank">SEN12MS-CR</a>. Takes radar and multi-spectral satellite data as inputs to make cloud-removed multispectral optical predictions.</td>
   </tr>
   <tr>
   </tr>
