@@ -20,41 +20,7 @@
     <!-- GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 <style>
-#myVideo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -100;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-#myVideo2 {
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-}
-#rcorners2 {
-    border-radius: 25px;
-    border: 2px solid #D5D8DC ;
-    padding: 20px; 
-    width: 900px;
-    height: 200px;    
-}
-</style>
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;margin:auto}
-.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
-  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
-  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-zda1{border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;text-align:center;vertical-align:top}
-.tg .tg-zda2{border-color:inherit;font-family:Arial, Helvetica, sans-serif !important;;text-align:left;vertical-align:top}
-.tg .tg-804w{font-family:Arial, Helvetica, sans-serif !important;;text-align:center;vertical-align:top}
 </style>
 
 </head>
@@ -89,13 +55,13 @@
                         
                     </div>
                 </div>
-              <p style="width:1000px; margin:auto; text-align:justify;">
+              <p class="lfs96-p">
               		On average, over half of all optical observations acquired via spaceborne Earth imagery are affected by clouds. As cloud coverage severely impedes the ongoing observation of Earth, the automated reconstruction of noisy or cloud covered information is a persistent problem in signal processing and remote sensing. While classical remote sensing applications oftentimes focused on narrowly-defined areals and case studies, the increasing availability of public-access, daily and large-scale satellite monitoring shifted the community's interest towards globally applicable methodology. To support the development of modern machine learning techniques for the purpose of cloud removal on whole-planet satellite data, we curated a large data set for training and evaluating new approaches.
 				</p>  <br />
-				<p style="width:1000px; margin:auto; text-align:justify;">
+				<p class="lfs96-p">
 This data set, SEN12MS-CR, is a multi-modal and mono-temporal data set for cloud removal. It contains paired and co-registered space-borne radar measurements practically unaffected by clouds, as well as cloud-covered and cloud-free multi-spectral optical satellite observations. The radar and optical data are collected via Sentinel-1 and Sentinel-2 satellites from European Space Agency's Copernicus mission, respectively. The Sentinel satellites provide public access data and are among the most prominent satellites in Earth observation. 
 				</p>  <br />
-				<p style="width:1000px; margin:auto; text-align:justify;">
+				<p class="lfs96-p">
 SEN12MS-CR is the first public data set for cloud removal in Earth observation to provide a large-scale global and all-season coverage. Based on the observation that cloud coverage varies widely in practice, all scenarios ranging from clear skies to absolute coverage are contained in the train and test data. By making this curated and readily pre-processed data set available to the research community, we hope to hope to help advance automated cloud removal in optical satellite data.
                   </p>
                   <br />
@@ -121,7 +87,7 @@ SEN12MS-CR is the first public data set for cloud removal in Earth observation t
                         
                     </div>
                 </div>
-					  <p style="width:1000px; margin:auto; text-align:justify;">
+					  <p class="lfs96-p">
                       SEN12MS-CR is a global data set for multi-modal cloud removal. It contains observations covering 175 globally distributed Regions of Interest recorded in one of four seasons throughout the year of 2018. For each region, synthetic aperture radar (SAR) Sentinel-1 as well as cloudy and cloud-free optical multi-spectral Sentinel-2 are provided. The full-scene images are sliced up into a total of 122,218 patch triplets, each patch of size \(256 \times 256 \: px^2\). The samples are patch-wise co-registered and fully compatible with the <a href="https://github.com/schmitt-muc/SEN12MS"; target="_blank">SEN12MS data set</a>, such that semantic segmentation and scene classification can be performed based on the available semantic land cover annotations. The approximate cloud coverage of all data is about at circa 48%---reaching from clear-view images (e.g. for validation purposes), over semi-transparent haze or small clouds to dense and wide cloud coverage.
                   </p>
             <figure class="item">
@@ -327,7 +293,7 @@ Please reach out to us if you would like to have your work referenced and your m
         </div>
               
   		<div class="txt-block">
-			<p style="width:1000px;">
+			<p style="max-width:1000px;">
 					1. Citation <br> <br>
 					&nbsp &nbsp If you utilize this dataset in your work, please use the following citation:
 			</p>
