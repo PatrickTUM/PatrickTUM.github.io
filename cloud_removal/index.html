@@ -104,7 +104,7 @@
             <div class="container basic-set" >
                 <div class="row text-center">
                     <div class="col-md-12">
-                        <h3 class="head-line"><span ></span>  SEN12MS-CR - Multi-Modal Single-Temporal Cloud Removal <span > </span> </h3>
+                        <h3 class="head-line"><span ></span>  I. SEN12MS-CR - Multi-Modal Single-Temporal Cloud Removal <span > </span> </h3>
                         
                     </div>
                 </div>
@@ -130,7 +130,7 @@
             <div class="container basic-set" >
                 <div class="row text-center">
                     <div class="col-md-12">
-                        <h3 class="head-line"><span ></span>  SEN12MS-CR-TS - Multi-Modal Multi-Temporal Cloud Removal <span > </span> </h3>
+                        <h3 class="head-line"><span ></span>  II. SEN12MS-CR-TS - Multi-Modal Multi-Temporal Cloud Removal <span > </span> </h3>
                         
                     </div>
                 </div>
@@ -140,8 +140,6 @@
                       	<a href="https://patricktum.github.io/cloud_removal/sen12mscrts/"; target="_blank">You can find the data set <b>HERE</b>.</a>
                       </div>
                   </p>
-            
-            
 
                   
            <figure class="item">
@@ -150,7 +148,30 @@
             <img src="assets/img/ts_cloudfree.gif" style="float: left; width: 32%; margin-right: 1%; margin-bottom: 0.6em;">
             <figcaption><small>Exemplary sequence-to-sequence cloud removal results. Left to right: Radar time series, (cloud-covered) optical time series and cloud-removed optical predictions.</small></figcaption>
 		   </figure>
+<br />
+<br />
             
+		   <section id="Statistics2-sec"  >
+           
+            <div class="container basic-set" >
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <h3 class="head-line"><span ></span>  III. UnCRtainTS - Uncertainty prediction for Cloud Removal <span > </span> </h3>
+                        
+                    </div>
+                </div>
+					  <p class="lfs96-p">
+                     UnCRtainTS is a state-of-the-art neural network for multi-modal multi-temporal cloud removal. At the time of its release, it outperforms all baselines on both SEN12MS-CR and SEN12MS-CR-TS. In addition to providing cloud-removed satellite images, UnCRtainTS also predicts pixel-wise uncertainty maps. The uncertainty maps are indicative of the potential error on a per-sample basis, and are available even at inference time without ground truth references. This allows to control the quality of reconstructed satellite images, which may be required for safety-critical downstream applications in remote sensing.
+                      <div class="row text-center">
+                      	<a href="https://github.com/PatrickTUM/UnCRtainTS"; target="_blank">You can find the model <b>HERE</b>.</a>
+                      </div>
+                  </p>
+                  
+           <figure class="item">
+            	<img src="assets/img/uncrtaints_architecture.png" class="img-responsive " alt="" width="1000px" style="margin:auto;"/>
+                <figcaption class="caption"><small>Architecture of UnCRtainTS. Given a sequence of cloudy satellite images, the model predicts a cloud-free observation and associated uncertainty maps.</small></figcaption>
+		   </figure>
+                  
             <p style="clear: both;">
            </div>
            </section>
@@ -185,19 +206,35 @@
          &nbsp &nbsp &nbsp &nbsp title = {{Multisensor Data Fusion for Cloud Removal in Global and All-Season Sentinel-2 Imagery}},<br>
          &nbsp &nbsp &nbsp &nbsp author = {Ebel, Patrick and Meraner, Andrea and Schmitt, Michael and Zhu, Xiao Xiang},<br>
          &nbsp &nbsp &nbsp &nbsp journal = {IEEE Transactions on Geoscience and Remote Sensing},<br>
-         &nbsp &nbsp &nbsp &nbsp year = {2020}<br>
-         &nbsp &nbsp &nbsp &nbsp publisher = {IEEE}<br>
+         &nbsp &nbsp &nbsp &nbsp year = {2020},<br>
+         &nbsp &nbsp &nbsp &nbsp publisher = {IEEE},<br>
+       	 &nbsp &nbsp &nbsp &nbsp url = {"<a href="https://doi.org/10.1109/TGRS.2020.3024744"; target="_blank">https://doi.org/10.1109/TGRS.2020.3024744</a>"}<br>
 }
 									</small>
 									</p>
+									
 									<p id = "rcorners2">
 									<small>
 @article{sen12mscrts,<br>
          &nbsp &nbsp &nbsp &nbsp title = {{SEN12MS-CR-TS: A Remote Sensing Data Set for Multi-modal Multi-temporal Cloud Removal}},<br>
          &nbsp &nbsp &nbsp &nbsp author = {Ebel, Patrick and Xu, Yajin and Schmitt, Michael and Zhu, Xiao Xiang},<br>
          &nbsp &nbsp &nbsp &nbsp journal = {IEEE Transactions on Geoscience and Remote Sensing},<br>
-         &nbsp &nbsp &nbsp &nbsp year = {2022}<br>
-         &nbsp &nbsp &nbsp &nbsp publisher = {IEEE}<br>
+         &nbsp &nbsp &nbsp &nbsp year = {2022},<br>
+         &nbsp &nbsp &nbsp &nbsp publisher = {IEEE},<br>
+       	 &nbsp &nbsp &nbsp &nbsp url = {"<a href="https://doi.org/10.1109/TGRS.2022.3146246"; target="_blank">https://doi.org/10.1109/TGRS.2022.3146246</a>"}<br>
+}
+									</small>
+									</p>
+									
+									<p id = "rcorners2">
+									<small>
+@inproceedings{uncrtaints,<br>
+         &nbsp &nbsp &nbsp &nbsp title = {{UnCRtainTS: Uncertainty Quantification for Cloud Removal in Optical Satellite Time Series}},<br>
+         &nbsp &nbsp &nbsp &nbsp author = {Ebel, Patrick and Garnot, Vivien Sainte Fare and Schmitt, Michael and Wegner, Jan and Zhu, Xiao Xiang},<br>
+         &nbsp &nbsp &nbsp &nbsp booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops},<br>
+         &nbsp &nbsp &nbsp &nbsp year = {2023},<br>
+         &nbsp &nbsp &nbsp &nbsp organization = {IEEE},<br>
+       	 &nbsp &nbsp &nbsp &nbsp url = {"<a href="https://arxiv.org/abs/2304.05464"; target="_blank">https://arxiv.org/abs/2304.05464</a>"}<br>
 }
 									</small>
 									</p>
@@ -228,18 +265,17 @@
     </p>
 			<small>
 			    <ul>
-                    <li>Meraner, A., Ebel, P., Zhu, X. X., & Schmitt, M. (2020). Cloud removal in Sentinel-2 imagery using a deep residual neural network and SAR-optical data fusion. ISPRS Journal of Photogrammetry and Remote Sensing, 166, 333-346. <a>https://www.sciencedirect.com/science/article/pii/S0924271620301398</a></li>
+                    <li>Meraner, A., Ebel, P., Zhu, X. X., & Schmitt, M. (2020). Cloud removal in Sentinel-2 imagery using a deep residual neural network and SAR-optical data fusion. ISPRS Journal of Photogrammetry and Remote Sensing, 166, 333-346. <a href=" https://www.sciencedirect.com/science/article/pii/S0924271620301398"; target="_blank">Link.</a></li>
 
-                    <li>Xu, F., Shi, Y., Ebel, P., Yu, L., Xia, G. S., Yang, W., & Zhu, X. X. (2022). GLF-CR: SAR-enhanced cloud removal with global–local fusion. ISPRS Journal of Photogrammetry and Remote Sensing, 192, 268-278. <a>https://www.sciencedirect.com/science/article/pii/S0924271622002064</a></li>
+                    <li>Xu, F., Shi, Y., Ebel, P., Yu, L., Xia, G. S., Yang, W., & Zhu, X. X. (2022). GLF-CR: SAR-enhanced cloud removal with global–local fusion. ISPRS Journal of Photogrammetry and Remote Sensing, 192, 268-278. <a href="https://www.sciencedirect.com/science/article/pii/S0924271622002064"; target="_blank">Link.</a></li>
 
-                    <li>Gu, Z., Ebel, P., Yuan, Q., Schmitt, M., & Zhu, X. X. (2022, July). Explicit Haze & Cloud Removal for Global Land Cover Classification. In CVPR 2022 Workshop on Multimodal Learning for Earth and Environment (pp. 1-6). <a>https://sites.google.com/view/rainforest-challenge</a></li>
+                    <li>Gu, Z., Ebel, P., Yuan, Q., Schmitt, M., & Zhu, X. X. (2022, July). Explicit Haze & Cloud Removal for Global Land Cover Classification. In CVPR 2022 Workshop on Multimodal Learning for Earth and Environment (pp. 1-6). <a href="https://sites.google.com/view/rainforest-challenge"; target="_blank">Link.</a></li>
 
-                    <li>Gawlikowski, J., Ebel, P., Schmitt, M., & Zhu, X. X. (2022). Explaining the Effects of Clouds on Remote Sensing Scene Classification. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing. <a>https://ieeexplore.ieee.org/abstract/document/9956865</a></li>
+                    <li>Gawlikowski, J., Ebel, P., Schmitt, M., & Zhu, X. X. (2022). Explaining the Effects of Clouds on Remote Sensing Scene Classification. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing. <a href="https://ieeexplore.ieee.org/abstract/document/9956865"; target="_blank">Link.</a></li>
             </ul> 
 	    </small>
               
     </div>
-
 
 </div>   				
         

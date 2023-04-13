@@ -111,6 +111,114 @@
 <br />
 <br />
 <br />
+
+
+<p style="text-align:center;"><span style="text-decoration:underline">Benchmarking</span></p>
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:8px 20px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:8px 20px;word-break:normal;}
+.tg .tg-z4i2{border-color:#000000;text-align:left;vertical-align:middle}
+.tg .tg-km2t{border-color:#000000;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-zv4m{border-color:#000000;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-z4i2">Method</th>
+    <th class="tg-z4i2">RMSE &#8595</th>
+    <th class="tg-z4i2">SAM &#8595</th>
+    <th class="tg-z4i2">PSNR &#8593</th>
+    <th class="tg-z4i2">SSIM &#8593</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-zv4m">least cloudy</td>
+    <td class="tg-zv4m">0.079</td>
+    <td class="tg-zv4m">12.204</td>
+    <td class="tg-zv4m">---</td>
+    <td class="tg-zv4m">0.815</td>
+  </tr>
+  <tr>
+    <td class="tg-zv4m">mosaicing</td>
+    <td class="tg-zv4m">0.062</td>
+    <td class="tg-zv4m">14.324</td>
+    <td class="tg-km2t">31.68</td>
+    <td class="tg-zv4m">0.811</td>
+  </tr>
+  <tr>
+    <td class="tg-zv4m">DSen2-CR <a href="https://www.sciencedirect.com/science/article/pii/S0924271620301398"; target="_blank">(Meraner et al., 2020)</a></td>
+    <td class="tg-zv4m">0.060</td>
+    <td class="tg-zv4m">12.147</td>
+    <td class="tg-zv4m">26.04</td>
+    <td class="tg-zv4m">0.810</td>
+  </tr>
+  <tr>
+    <td class="tg-zv4m"><span style="font-weight:400;font-style:normal">STGAN <a href="https://openaccess.thecvf.com/content_WACV_2020/papers/Sarukkai_Cloud_Removal_from_Satellite_Images_using_Spatiotemporal_Generator_Networks_WACV_2020_paper.pdf"; target="_blank">(Sarukkai et al., 2020)</a></span></td>
+    <td class="tg-zv4m">0.057</td>
+    <td class="tg-zv4m">12.548</td>
+    <td class="tg-zv4m">25.42</td>
+    <td class="tg-zv4m">0.818</td>
+  </tr>
+  <tr>
+    <td class="tg-zv4m">CR-TS Net <a href="https://ieeexplore.ieee.org/document/9691348"; target="_blank">(Ebel et al., 2022)</a></td>
+    <td class="tg-zv4m">0.051</td>
+    <td class="tg-zv4m">10.657</td>
+    <td class="tg-zv4m">26.68</td>
+    <td class="tg-zv4m">0.836</td>
+  </tr>
+  <tr>
+    <td class="tg-zv4m">U-TAE <a href="https://arxiv.org/abs/2107.07933"; target="_blank">(Garnot et al., 2021)</a></td>
+    <td class="tg-zv4m">0.051</td>
+    <td class="tg-zv4m">11.649</td>
+    <td class="tg-zv4m">27.05</td>
+    <td class="tg-zv4m">0.849</td>
+  </tr>
+  <tr>
+    <td class="tg-zv4m">UnCRtainTS L2 <a href="https://arxiv.org/abs/2304.05464"; target="_blank">(Ebel et al., 2023)</a></td>
+    <td class="tg-km2t">0.049</td>
+    <td class="tg-zv4m">10.168</td>
+    <td class="tg-zv4m">27.23</td>
+    <td class="tg-zv4m">0.859</td>
+  </tr>
+  <tr>
+    <td class="tg-zv4m">UnCRtainTS &#963; <a href="https://arxiv.org/abs/2304.05464"; target="_blank">(Ebel et al., 2023)</a></td>
+    <td class="tg-zv4m">0.051</td>
+    <td class="tg-km2t">10.160</td>
+    <td class="tg-zv4m">27.84</td>
+    <td class="tg-km2t">0.866</td>
+  </tr>
+    <tr style="border-bottom:1px solid black">
+    <td colspan="100%"></td>
+  </tr>
+  <tr>
+    <td class="tg-zv4m">UnCRtainTS ensemble <a href="https://arxiv.org/abs/2304.05464"; target="_blank">(Ebel et al., 2023)</a></td>
+    <td class="tg-km2t">0.049</td>
+    <td class="tg-km2t">10.18</td>
+    <td class="tg-km2t">28.19</td>
+    <td class="tg-km2t">0.872</td>
+  </tr>
+</tbody>
+</table>
+
+<br /> 
+<p style="text-align:center;">
+Note that ensemble methods should be considered a category on their own, for the sake of a fair comparison. 
+<br /> 
+<br /> 
+Feel free to report this benchmarking of prior methods in your work utilizing SEN12MS-CR-TS. 
+<br /> 
+Please reach out to us if you would like to have your work referenced and your model included in the benchmark.
+</p>
+
+<br />
+<br />
+<br />
+<br />
 		   <section id="Download-sec"  >
 
            
