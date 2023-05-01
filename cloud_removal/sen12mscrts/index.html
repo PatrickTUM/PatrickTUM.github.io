@@ -60,16 +60,25 @@
               <p class="lfs96-p">
 				On average, over half of all optical observations acquired via spaceborne Earth imagery are affected by clouds. As cloud coverage severely impedes the ongoing observation of Earth, the automated reconstruction of noisy or cloud covered information is a persistent problem in signal processing and remote sensing. While classical remote sensing applications oftentimes focused on narrowly-defined areals and case studies, the increasing availability of public-access, daily and large-scale satellite monitoring shifted the community's interest towards globally applicable methodology. To support the development of modern machine learning techniques for the purpose of cloud removal on whole-planet satellite data, we curated a large data set for training and evaluating new approaches.
               </p> <br />
+		   
               <p class="lfs96-p">
 				This data set, SEN12MS-CR-TS, is a multi-modal and multi-temporal data set for cloud removal. It contains paired and co-registered sequences of space-borne radar measurements practically unaffected by clouds, as well as cloud-covered and cloud-free multi-spectral optical satellite observations. Complementary to the radar modality's cloud-robust information, historical satellite data is collected to provide additional sensor information for more faithfully reconstructing cloud-covered pixels. The radar and optical data are collected via Sentinel-1 and Sentinel-2 satellites from European Space Agency's Copernicus mission, respectively. The Sentinel satellites provide public access data and are among the most prominent satellites in Earth observation.
               </p> <br />
-			  <p class="lfs96-p">
-				SEN12MS-CR-TS is the first public data set for cloud removal in Earth observation to provide repeates measures of multi-sensor data at a large-scale global and all-season coverage. Based on the observation that cloud coverage varies widely in practice, all scenarios ranging from clear skies to absolute coverage are contained in the train and test data. By making this curated and readily pre-processed data set available to the research community, we hope to hope to help advance automated cloud removal in optical satellite data.
-              </p> <br />
-                  
+              
            <figure class="item">
             	<img src="../assets/img/samples/multi/sample_multi.png" class="img-responsive " alt="" width="800px" style="margin:auto;"/>
                 <figcaption class="caption"><small>Exemplary data samples. Every time point of an observation in SEN12MS-CR-TS is a tuple consisting of co-registered 2-bands Sentinel-1 radar measurements, as well as 13-bands Sentinel-2 optical observations. Automatically annotated cloud masks are shown below. There are 30 repeated measures throughout the year of 2018 for each ROI in the data set.</small></figcaption>
+		   </figure>
+              
+			  <p class="lfs96-p">
+				SEN12MS-CR-TS is the first public data set for cloud removal in Earth observation to provide repeates measures of multi-sensor data at a large-scale global and all-season coverage. Based on the observation that cloud coverage varies widely in practice, all scenarios ranging from clear skies to absolute coverage are contained in the train and test data. By making this curated and readily pre-processed data set available to the research community, we hope to hope to help advance automated cloud removal in optical satellite data.
+              </p> <br />
+              
+           <figure class="item">
+            <img src="../assets/img/ts_sar.gif" style="float: left; width: 32%; margin-right: 1%; margin-bottom: 0.5em;">
+            <img src="../assets/img/ts_cloudy.gif" style="float: left; width: 32%; margin-right: 1%; margin-bottom: 0.5em;">
+            <img src="../assets/img/ts_cloudfree.gif" style="float: left; width: 32%; margin-right: 1%; margin-bottom: 0.6em;">
+            <figcaption><small>Exemplary sequence-to-sequence cloud removal results. Left to right: Radar time series, (cloud-covered) optical time series and cloud-removed optical predictions.</small></figcaption>
 		   </figure>
 		   
            </div>
@@ -91,21 +100,14 @@
                       SEN12MS-CR-TS is a global data set for multi-modal and multi-temporal cloud removal. It contains observations covering 53 globally distributed Regions of Interest, backward-compatible with the SEN12MS-CR data set. For each region, 30 temporally aligned synthetic aperture radar Sentinel-1 as well as optical multi-spectral Sentinel-2 images are collected throughout the whole year of 2018. 30 time samples for each of the 15578 patch-wise observations, for every S1 and S2 measurement. The approximate cloud coverage of all data is about 50%---reaching from clear-view images (e.g. for validation purposes), over semi-transparent haze or small clouds to dense and wide cloud coverage. The geospatial locations of ROI and our train and test split definitions are compatible with the mono-temporal <a href="https://patrickTUM.github.io/cloud_removal/sen12mscr/"; target="_blank">SEN12MS-CR data set</a> for cloud removal, so both data sets can complement one another and be combined for developing and benchmarking cloud removal solutions.
                   </p>
             <figure class="item">
+            	<!--
             	<img src="../assets/img/maps/SEN12MSCRTS_atlas_full_size.png" class="img-responsive " alt="" width="900px" style="margin:auto;"/>
-                <figcaption class="caption"><small>Geospatial distribution of ROI in SEN12MS-CR-TS. Train split (blue), test split (green), complementary SEN12MS-CR-TS ROI (gray).</small></figcaption>
-			</figure>
-		    <br />
-		    
-            <figure class="item">
-            <img src="../assets/img/ts_sar.gif" style="float: left; width: 32%; margin-right: 1%; margin-bottom: 0.5em;">
-            <img src="../assets/img/ts_cloudy.gif" style="float: left; width: 32%; margin-right: 1%; margin-bottom: 0.5em;">
-            <img src="../assets/img/ts_cloudfree.gif" style="float: left; width: 32%; margin-right: 1%; margin-bottom: 0.6em;">
-            <figcaption><small>Exemplary sequence-to-sequence cloud removal results. Left to right: Radar time series, (cloud-covered) optical time series and cloud-removed optical predictions.</small></figcaption>
-		   </figure>
-			
+            	-->
+            	<iframe src="https://www.google.com/maps/d/embed?mid=1A8GqtGwFuUQx2tUvUYuMWw1V8Gffgf8&ehbc=2E312F" width="960" height="480"></iframe>
+                <figcaption class="caption"><small>Geospatial distribution of ROI in SEN12MS-CR-TS. Train split (blue), test split (violet), complementary SEN12MS-CR-TS ROI (gray and black).</small></figcaption>
+			</figure>	
            </div>
            </section>
-		   <br/>
 		   
 <br />
 <br />
